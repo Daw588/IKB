@@ -48,6 +48,8 @@ function IKLeg:Solve(targetPosition: Vector3): ()
 end
 
 function IKLeg:Destroy(): ()
+	self._Hip.C0 = self._HipC0Cache
+	
 	self._TransformResetLoop:Disconnect()
 end
 

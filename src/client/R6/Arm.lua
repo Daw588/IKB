@@ -85,8 +85,7 @@ function IKArm:Solve(targetPosition: Vector3): ()
 end
 
 function IKArm:Destroy(): ()
-	self._Shoulder.C0 = self._OriginalShoulderC0
-	self._Shoulder.C1 = self._OriginalShoulderC1
+	self._Shoulder.C0 = self._ShoulderC0Cache
 	
 	self._TransformResetLoop:Disconnect()
 end

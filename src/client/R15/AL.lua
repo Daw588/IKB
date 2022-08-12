@@ -70,6 +70,9 @@ function ALIK:Solve(targetPosition: Vector3): ()
 end
 
 function ALIK:Destroy(): ()
+	self._UpperJoint.C0 = self._UpperJointC0Cache
+	self._LowerJoint.C0 = self._LowerJointC0Cache
+	
 	self._TransformResetLoop:Disconnect()
 end
 
